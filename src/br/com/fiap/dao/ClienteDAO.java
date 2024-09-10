@@ -37,5 +37,24 @@ public class ClienteDAO {
         }
     }
 
+    public String alterar(Cliente cliente){
+        String sql = "update DDD_cliente set nome_cliente=?, placa=? where id_cliente=?";
+
+        // try-with-resources
+        try(PreparedStatement ps = getCon().prepareStatement(sql);) {
+            ps.setString(1, cliente.getNome_cliente());
+            ps.setString(2, cliente.getPlaca());
+            ps.setInt(3, cliente.getId_cliente());
+
+            if(ps.executeUpdate() > 0){
+                return "Alterado com sucesso!";
+            }else{
+                return "Falha ao alterar!";
+            }
+        } catch (SQLException e) {
+            return "Erro de SQL: " + e.getMessage();
+        }
+    }
+
 
 }
