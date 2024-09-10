@@ -10,7 +10,6 @@ public class Cliente {
     public int getId_cliente() {
         return id_cliente;
     }
-
     public void setId_cliente(int id_cliente) {
         this.id_cliente = id_cliente;
     }
@@ -18,7 +17,6 @@ public class Cliente {
     public String getNome_cliente() {
         return nome_cliente;
     }
-
     public void setNome_cliente(String nome_cliente) {
         this.nome_cliente = nome_cliente;
     }
@@ -26,7 +24,6 @@ public class Cliente {
     public String getPlaca() {
         return placa;
     }
-
     public void setPlaca(String placa) {
         this.placa = placa;
     }
